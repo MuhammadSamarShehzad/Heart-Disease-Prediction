@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  heart-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    container_name: heart-disease-app

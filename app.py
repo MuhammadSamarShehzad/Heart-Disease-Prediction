@@ -46,7 +46,6 @@ st.markdown(
 
 # Main container
 with st.container():
-    st.image("heart_banner.jpg", use_container_width=True)
     st.markdown(
         '<div style="text-align: center; padding-top: 10px;">'
         '<h1 style="color: #2C2D3A;">Heart Disease Prediction</h1>'
@@ -60,12 +59,12 @@ with st.sidebar:
     st.header("Patient Details")
 
     # Input fields with collapsible magic info boxes
-    
+
     # age
     age = st.number_input("Age (years):", min_value=29, max_value=80, value=50, step=1)
 
     st.sidebar.markdown("------------------")
-    
+
     # sex
     sex = st.radio("Sex:", options=["Male", "Female"])
 
@@ -109,7 +108,7 @@ with st.sidebar:
         )
 
     st.sidebar.markdown("------------------")
-    
+
     # cholesterol
     col1, col2 = st.columns([10, 1])
     col1.write("### Cholesterol Level (mg/dL):")
@@ -141,9 +140,9 @@ with st.sidebar:
             '</div>',
             unsafe_allow_html=True
         )
-    
-    st.sidebar.markdown("------------------") 
-    
+
+    st.sidebar.markdown("------------------")
+
     # resting ecg
     col1, col2 = st.columns([10, 1])
     col1.write("### Resting ECG:")
@@ -159,8 +158,8 @@ with st.sidebar:
             unsafe_allow_html=True
         )
 
-    st.sidebar.markdown("------------------")  
-    
+    st.sidebar.markdown("------------------")
+
     # max heart rate
     col1, col2 = st.columns([10, 1])
     col1.write("### Maximum Heart Rate Achieved:")
@@ -177,7 +176,7 @@ with st.sidebar:
         )
 
     st.sidebar.markdown("------------------")
-    
+
     # exercise angina
     col1, col2 = st.columns([10, 1])
     col1.write("### Exercise-Induced Angina:")
@@ -194,7 +193,7 @@ with st.sidebar:
         )
 
     st.sidebar.markdown("------------------")
-    
+
     # oldpeak
     col1, col2 = st.columns([10, 1])
     col1.write("### ST Depression (Oldpeak):")
@@ -209,9 +208,9 @@ with st.sidebar:
             '</div>',
             unsafe_allow_html=True
         )
-    
+
     st.sidebar.markdown("------------------")
-        
+
     # ST slope
     col1, col2 = st.columns([10, 1])
     col1.write("### ST Slope:")
@@ -273,7 +272,7 @@ if st.button("Predict"):
             f'''
             <div style="text-align:center; background-color:#ffcccc; padding: 20px; border-radius: 10px; border: 2px solid red; box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);">
                 <h3 style="color: red; font-family: 'Arial', sans-serif;">💔 Heart Disease Detected</h3>
-                <p style="font-size: 18px; color: #a50000; font-weight: bold;"> 
+                <p style="font-size: 18px; color: #a50000; font-weight: bold;">
                     <span style="font-size: 22px; color: red;">Probability:</span> {probability:.2f}%
                 </p>
                 <p style="font-size: 16px; color: #a50000;">It's crucial to take immediate steps for your heart health! 🔬</p>
@@ -287,7 +286,7 @@ if st.button("Predict"):
             f'''
             <div style="text-align:center; background-color:#e0ffcc; padding: 20px; border-radius: 10px; border: 2px solid green; box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);">
                 <h3 style="color: green; font-family: 'Arial', sans-serif;">❤️ No Heart Disease Detected</h3>
-                <p style="font-size: 18px; color: #006600; font-weight: bold;"> 
+                <p style="font-size: 18px; color: #006600; font-weight: bold;">
                     <span style="font-size: 22px; color: green;">Probability:</span> {probability:.2f}%
                 </p>
                 <p style="font-size: 16px; color: #006600;">You're in the clear! Keep up the healthy habits! 💪</p>
