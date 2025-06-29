@@ -1,6 +1,5 @@
 # ❤️ Heart Disease Classification with Machine Learning  
 
-![Heart Disease Classification Banner](https://github.com/user-attachments/assets/3c914fc9-5c9d-4fab-b1a1-a428c6d54bfd)  
 
 Welcome to the **Heart Disease Classification Project**! This repository demonstrates how machine learning, specifically the **CatBoost** algorithm, can be leveraged to predict heart disease based on clinical data.  
 
